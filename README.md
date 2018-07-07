@@ -1,2 +1,4 @@
 # ShoutOutWebApp
-A simple webapp for peoples to shoutout their feelings or messages to the world to see
+
+
+A simple Web-APP for people to shout-out their feelings or messages to the world to see
