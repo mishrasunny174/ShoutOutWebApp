@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: arial;
+  font-size: 15px;
+  background-color: #f4f4f4;
+  line-height: 1.5em;
+}
+
+#shoutbox {
+  background-color:  #333333;
+  margin: 50px auto;
+  overflow: auto;
+  width: 60%;
+  min-height: 450px;
+}
+
+h1{
+  color: #FFFFFF;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px 5px;
+  text-align: center;
+}
+
+#shouts {
+  background-color: #f4f4f4;
+  width: 90%;
+  margin: 20px auto;
+  height: 400px;
+  overflow: auto;
+}
+
+.shout{
+  list-style: none;
+  padding: 8px;
+  border-bottom: 1px dotted #000000;
+}
+
+.shout span{
+  color: #aaaaaa;
+}
+
+#input_box{
+  width: 90%;
+}
+
+#input_box input[type=text]{
+  width: 48%;
+  height: 30px;
+  padding: 2px auto;
+}
