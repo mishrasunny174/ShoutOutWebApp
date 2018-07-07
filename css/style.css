@@ -46,10 +46,27 @@ h1{
 
 #input_box{
   width: 90%;
+  margin: auto;
+  min-height: 80px;
 }
 
 #input_box input[type=text]{
-  width: 48%;
-  height: 30px;
-  padding: 2px auto;
+  width: 48.5%;
+  height: 25px;
+  padding: 3px;
+  margin-bottom: 20px;
+  border: #666666 solid 1px;
+}
+
+#input_box .shout_out_button{
+  width: 100%;
+  min-height: 30px;
+  padding:5px;
+  margin: 10px auto 20px auto;
+}
+
+@media only screen and (max-width:1368px) {
+  #input_box input[type=text]{
+    width: 98%;
+  }
 }
