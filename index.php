@@ -1,6 +1,6 @@
 <?php include 'database.php'; ?>
 <?php
-  $query = 'SELECT * FROM shouts';
+  $query = 'SELECT * FROM shouts ORDER BY id DESC';
   $result = mysqli_query($connection, $query);
 ?>
 <!doctype html>
@@ -18,18 +18,7 @@
       <div id='shouts'>
         <ul>
           <?php while($row = mysqli_fetch_assoc($result)) : ?>
-            <li class='shout'>
-              <span id='datetime_span'><?php echo $row['time']; ?> :
-              </span>
-              <strong>
-              <span id='name_span'>
-                <?php echo $row['user']?>
-              </span>
-            </strong>
-              <span id='message_span'>
-                 - <?php echo $row['message'] ?>
-              </span>
-              </li>
+            <li class='shout'><span id='datetime_span'><?php echo $row['time']; ?> :</span><strong> <?php echo $row['user']?></strong> - <?php echo $row['message'] ?></li>
           <?php endwhile; ?>
         </ul>
       </div>

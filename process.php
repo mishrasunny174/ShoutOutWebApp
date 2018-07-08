@@ -3,7 +3,7 @@
     $user = mysqli_real_escape_string($connection, $_POST['user']);
     $message = mysqli_real_escape_string($connection, $_POST['message']);
     date_default_timezone_set('Asia/Kolkata');
-    $datetime = date('y-m-d').' '.date('h-i-s');
+    $datetime = date('Y-m-d').' '.date("h-i-s a");
     if(!isset($user) || !isset($message) || $user=='' || $message == '') {
       $error = "Please enter name and message";
       header('Location: index.php?error='.urlencode($error));
