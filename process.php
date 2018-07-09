@@ -1,7 +1,18 @@
-<?php include 'database.php';
-  if(isset($_POST['submit'])){
-    $user = mysqli_real_escape_string($connection, $_POST['user']);
-    $message = mysqli_real_escape_string($connection, $_POST['message']);
+<?php include 'database.php'; ?>
+
+<?php
+function convertSafe($string){
+    $string = trim($string);
+    $string = stripslashes($string);
+    $string = htmlspecialchars($string);
+    return $string;
+}
+?>
+
+<?php
+  if($_SERVER['REQUEST_METHOD']=='POST'){
+    $user = mysqli_real_escape_string($connection,convertSafe($_POST['user']));
+    $message = mysqli_real_escape_string($connection,convertSafe($_POST['message']));
     date_default_timezone_set('Asia/Kolkata');
     $datetime = date('Y-m-d').' '.date("h-i-s a");
     if(!isset($user) || !isset($message) || $user=='' || $message == '') {
